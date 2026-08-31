@@ -1,0 +1,405 @@
+﻿@page
+@model IndexModel
+@using System
+
+@{
+    ViewData["Title"] = "IT Support Dashboard";
+
+    var environment = Environment.GetEnvironmentVariable("APP_ENVIRONMENT") ?? "Development";
+    var appVersion = Environment.GetEnvironmentVariable("APP_VERSION") ?? "1.0.0";
+}
+
+<div class="hero">
+    <div class="hero-content">
+
+        <span class="badge">ASP.NET CORE • .NET 10</span>
+
+        <h1>IT Support Dashboard</h1>
+
+        <p>
+            A modern cloud-ready IT support application designed to
+            monitor system status, manage support services and provide
+            essential diagnostic information.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#services" class="btn-primary">
+                Explore Services
+            </a>
+
+            <a href="#status" class="btn-secondary">
+                System Status
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- SYSTEM STATUS -->
+
+<section id="status" class="status-section">
+
+    <div class="section-header">
+
+        <span>LIVE MONITORING</span>
+
+        <h2>System Status</h2>
+
+        <p>
+            Current status of the IT support environment.
+        </p>
+
+    </div>
+
+
+    <div class="status-card">
+
+        <div class="status-indicator"></div>
+
+        <div class="status-information">
+
+            <h3>System Operational</h3>
+
+            <p>
+                All monitored services are currently running normally.
+            </p>
+
+        </div>
+
+        <strong class="online-status">
+            ONLINE
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- APPLICATION INFORMATION -->
+
+<section class="application-section">
+
+    <div class="section-header">
+
+        <span>APPLICATION CONFIGURATION</span>
+
+        <h2>Deployment Information</h2>
+
+        <p>
+            Configuration values are retrieved from the application
+            environment rather than being hardcoded into the application.
+        </p>
+
+    </div>
+
+
+    <div class="application-grid">
+
+        <div class="application-card">
+
+            <span class="card-label">
+                ENVIRONMENT
+            </span>
+
+            <h3>
+                @environment
+            </h3>
+
+            <p>
+                Current application environment configured through
+                Azure App Service.
+            </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+            <span class="card-label">
+                APPLICATION VERSION
+            </span>
+
+            <h3>
+                @appVersion
+            </h3>
+
+            <p>
+                Current application version provided through
+                Azure App Service configuration.
+            </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+            <span class="card-label">
+                PLATFORM
+            </span>
+
+            <h3>
+                Azure App Service
+            </h3>
+
+            <p>
+                Cloud hosting platform used to publish and operate
+                the web application.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUPPORT SERVICES -->
+
+<section id="services" class="services-section">
+
+    <div class="section-header">
+
+        <span>SUPPORT TOOLS</span>
+
+        <h2>Available Services</h2>
+
+        <p>
+            Quick access to essential IT support functionality.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <!-- SYSTEM INFORMATION -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🖥️
+            </div>
+
+            <h3>
+                System Information
+            </h3>
+
+            <p>
+                View operating system, hardware and system configuration
+                information.
+            </p>
+
+            <button>
+                View Details
+            </button>
+
+        </div>
+
+
+        <!-- NETWORK DIAGNOSTICS -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🌐
+            </div>
+
+            <h3>
+                Network Diagnostics
+            </h3>
+
+            <p>
+                Check network connectivity and diagnose common connection
+                problems.
+            </p>
+
+            <button>
+                Run Diagnostics
+            </button>
+
+        </div>
+
+
+        <!-- STORAGE MONITORING -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                💾
+            </div>
+
+            <h3>
+                Storage Monitoring
+            </h3>
+
+            <p>
+                Monitor available storage and identify potential disk
+                capacity issues.
+            </p>
+
+            <button>
+                Check Storage
+            </button>
+
+        </div>
+
+
+        <!-- SYSTEM REPORTS -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📊
+            </div>
+
+            <h3>
+                System Reports
+            </h3>
+
+            <p>
+                Generate detailed reports containing system and diagnostic
+                information.
+            </p>
+
+            <button>
+                Generate Report
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TECHNOLOGY -->
+
+<section class="technology-section">
+
+    <div class="technology-content">
+
+        <span>
+            APPLICATION TECHNOLOGY
+        </span>
+
+        <h2>
+            Built for the Cloud
+        </h2>
+
+        <p>
+            This application is developed using ASP.NET Core and is designed
+            for deployment, configuration and monitoring through Microsoft
+            Azure App Service.
+        </p>
+
+    </div>
+
+
+    <div class="technology-list">
+
+        <div>
+
+            <strong>
+                ASP.NET Core
+            </strong>
+
+            <span>
+                Web Framework
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                .NET 10
+            </strong>
+
+            <span>
+                Runtime
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Azure App Service
+            </strong>
+
+            <span>
+                Cloud Platform
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Application Insights
+            </strong>
+
+            <span>
+                Monitoring
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CLOUD DEPLOYMENT -->
+
+<section class="cloud-section">
+
+    <div class="cloud-content">
+
+        <span>
+            CLOUD DEPLOYMENT
+        </span>
+
+        <h2>
+            Azure Deployment Active
+        </h2>
+
+        <p>
+            This application has been published directly from Visual Studio
+            to Microsoft Azure App Service. Application configuration can be
+            managed centrally through Azure App Service environment variables.
+        </p>
+
+        <div class="cloud-status">
+
+            <div class="cloud-dot"></div>
+
+            <span>
+                Azure App Service Online
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="dashboard-footer">
+
+    <p>
+        IT Support Dashboard
+        <span>•</span>
+        Version @appVersion
+        <span>•</span>
+        @environment
+    </p>
+
+</footer>
